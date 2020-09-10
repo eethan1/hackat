@@ -1,0 +1,26 @@
+{
+    "applications" : {
+        "gecko":{
+            "id":"cjiso1117@gmail.com"
+        }
+    },
+    "author": "cjiso",
+    "description": "hacker Cat",
+    "manifest_version" : 2,
+    "name": "Hackat",
+    "version": "1.1.0",
+    "icons": {
+        "96": "icons/icon.ico"
+    },
+    "devtools_page" : "theme/hackat.html",
+    "background" : {
+        "page" : "background.html"
+    },
+    "permissions": ["tabs", "activeTab", "webRequest", "webRequestBlocking", "<all_urls>", "storage","devtools"],
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js" : ["theme/js/content_script.js"]
+        }
+    ]
+}
